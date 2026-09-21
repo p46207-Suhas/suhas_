@@ -1,3 +1,4 @@
+
 import streamlit as st
 import pandas as pd
 import joblib
@@ -51,6 +52,3 @@ if st.button('Predict Delivery Delay'):
         st.error(f'Prediction: Delivery is LIKELY to be Delayed (Probability: {prediction_proba[0]:.2f})')
     else:
         st.success(f'Prediction: Delivery is LIKELY to be On Time (Probability: {1 - prediction_proba[0]:.2f})')
-
-# To make this a runnable app.py, save the content to a file.
-# The actual saving to file will be done in the next step to avoid issues.
